@@ -45,8 +45,8 @@ public class WaresGoodsService  implements IGoods{
 
         Boolean isSuccess = goodsService.sendgoods(deliverReq);
 
-        logger.info("请求参数[优惠券] => uId：{} goodsId：{} bizId：{} extMap：{}", uId, goodsId, bizId, JSON.toJSON(extMap));
-        logger.info("测试结果[优惠券]：{}", isSuccess);
+        logger.info("请求参数[实物] => uId：{} goodsId：{} bizId：{} extMap：{}", uId, goodsId, bizId, JSON.toJSON(extMap));
+        logger.info("测试结果[实物]：{}", isSuccess);
         if (!isSuccess) throw new RuntimeException("实物商品发放失败");
 
     }

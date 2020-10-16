@@ -37,7 +37,7 @@ public class CouponGoodsService implements IGoods {
         CouponResult couponResult = couponService.sendCoupon(uId, goodsId, bizId);
         logger.info("请求参数[优惠券] => uId：{} goodsId：{} bizId：{} extMap：{}", uId, goodsId, bizId, JSON.toJSON(extMap));
         logger.info("测试结果[优惠券]：{}", JSON.toJSON(couponResult));
-        if(!"0000".equals(couponResult)){
+        if(!"0000".equals(couponResult.getCode())){
             throw new RuntimeException(couponResult.getInfo());
         }
     }
